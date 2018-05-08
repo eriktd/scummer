@@ -1,0 +1,15 @@
+<h4>Add a task</h4>
+
+<form (ngSubmit)="addTask(); taskForm.reset()" #taskForm="ngForm">
+  <div class="form-group">
+    <input [(ngModel)]="task.name" type="text" class="form-control" id="name" required placeholder="Task Name" name="name">
+  </div>
+  
+  <div class="form-group">
+    <select class="form-control" id="status" required [(ngModel)]="task.status" name="status" selected="Backlog">
+      <option *ngFor="let status of statuses" value="{{status.value}}">{{status.name}}</option>
+    </select>
+  </div>
+  
+  <button type="submit" class="btn btn-success" [disabled]="!taskForm.form.valid">Add Task</button>
+</form>

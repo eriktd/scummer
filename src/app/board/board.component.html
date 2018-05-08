@@ -1,0 +1,20 @@
+<task-input (notify)="onNotify($event)"></task-input>
+
+<h4>Board</h4>
+<p>You may drag and drop tasks to change their status.</p>
+
+<table class="boardTab">
+  <tr>
+    <th *ngFor="let st of stats">{{st}}</th>
+  </tr>
+  <tr>
+    <td *ngFor="let st of stats; let i = index">
+      <ul id="{{i}}" [dragula]='"bag-one"' [dragulaModel]="tasks[i]">
+        <li id={{task._id}} *ngFor="let task of tasks[i]">
+          <div class = "taskName">{{task.name || emptyTaskName}}</div>
+          <div class="taskId">{{task._id}}</div>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>

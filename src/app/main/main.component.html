@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+            <ul class='nav navbar-nav'>
+                <li><a [routerLink]="['']">Home</a></li>
+                <li><a [routerLink]="['/board']">Task Board</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+            </ul>
+</nav>
+    
+    <div class="mid">
+
+        <div class="container" id="main">
+                <div class="row">
+                    <div class="col-md-10">
+                        <router-outlet></router-outlet>
+                    </div>
+                    <div class="col-md-2">
+                        <router-outlet name="popup"></router-outlet>
+                    </div>
+                </div> 
+        </div>
+
+    </div>
+
+<footer class="foot footer-copyright text-center">
+  © 2018 Copyright:
+  <a class="text-white" href="http://demo1.schpupel.com"> Schpupel.com </a>
+</footer>

@@ -1,0 +1,12 @@
+.panel-heading,
+.panel {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    color: black;
+}
+
+.panel-body,
+.panel-primary{
+    background-color: #ddd;
+    border-color: #aaa;
+}
